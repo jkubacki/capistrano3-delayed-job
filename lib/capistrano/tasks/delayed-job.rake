@@ -49,11 +49,6 @@ namespace :delayed_job do
       end
     end
   end
-
-  after 'deploy:published', 'restart' do
-    invoke 'delayed_job:restart'
-  end
-
 end
 
 namespace :load do
